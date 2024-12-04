@@ -17,11 +17,6 @@ app.use(cors({
   origin: process.env.CORS_ORIGIN
 }));
 
-// Routes
-app.get("/", (req, res) => {
-  res.sendFile("/index.html");
-});
-
 app.use("/api", contactRoutes);
 
 // Database connection
