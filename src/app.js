@@ -1,11 +1,9 @@
-import express from "express";
-import mongoose from "mongoose";
-import bodyParser from "body-parser";
-import cors from "cors";
-import contactRoutes from "./route/contactRoutes";
-import dotenv from "dotenv";
-import path from "path";
-dotenv.config()
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const contactRoutes = require("./route/contactRoutes");
+const dotenv = require("dotenv");
+const path = require("path");dotenv.config()
 
 const app = express();
 const PORT = process.env.PORT;
