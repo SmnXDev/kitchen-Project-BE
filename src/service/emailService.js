@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
-
-export const sendEmail = async (name, email, message,phone) => {
+ const sendEmail = async (name, email, message,phone) => {
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
@@ -15,4 +14,9 @@ export const sendEmail = async (name, email, message,phone) => {
     subject: "New Contact Form Submission",
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
   });
+};
+
+
+module.exports = {
+  sendEmail,
 };

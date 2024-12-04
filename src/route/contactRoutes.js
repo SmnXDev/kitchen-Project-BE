@@ -1,7 +1,5 @@
-import express from "express";
-import { Contact } from "../model/Contact";
-import { sendEmail } from "../service/emailService";
-
+const express = require("express");
+const { sendEmail } = require("../service/emailService");
 const router = express.Router();
 
 router.post("/contact", async (req, res) => {
@@ -24,4 +22,4 @@ router.post("/contact", async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
